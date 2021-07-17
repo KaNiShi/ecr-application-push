@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+    app:
+        build:
+            context: ./containers/php
+            dockerfile: Dockerfile
+            target: development
+        volumes: 
+            - ./application:/var/www/html
+        ports:
+            - 8000:80
